@@ -14,10 +14,10 @@ Follow each of these phases and their individual workflows IN SEQUENCE:
 ### PHASE 1: Plan subagents assignments
 
 Read the following files:
-- `research-os/specs/[this-spec]/tasks.md`
+- `research-os/artifacts/[this-spec]/tasks.md`
 - `research-os/roles/implementers.yml`
 
-Create `research-os/specs/[this-spec]/planning/task-assignments.yml` with this structure:
+Create `research-os/artifacts/[this-spec]/planning/task-assignments.yml` with this structure:
 
 ```yaml
 task_assignments:
@@ -36,15 +36,15 @@ Ensure each assigned subagent exists in both of these locations:
 
 ### PHASE 2: Delegate task groups implementations to assigned subagents
 
-Loop through each task group in `research-os/specs/[this-spec]/tasks.md` and delegate its implementation to the assigned subagent specified in `task-assignments.yml`.
+Loop through each task group in `research-os/artifacts/[this-spec]/tasks.md` and delegate its implementation to the assigned subagent specified in `task-assignments.yml`.
 
 For each delegation, provide the subagent with:
 - The task group (including the parent task and all sub-tasks)
-- The spec file: `research-os/specs/[this-spec]/spec.md`
+- The spec file: `research-os/artifacts/[this-spec]/spec.md`
 - Instruct subagent to:
   1. Perform their implementation
-  2. Check off the task and sub-task(s) in `research-os/specs/[this-spec]/tasks.md`
-  3. Document their work in an implementation report named and numbered by this task name and placed in `research-os/specs/[this-spec]/implementation/`.
+  2. Check off the task and sub-task(s) in `research-os/artifacts/[this-spec]/tasks.md`
+  3. Document their work in an implementation report named and numbered by this task name and placed in `research-os/artifacts/[this-spec]/implementation/`.
 
 ### PHASE 3: Delegate verifications of implementation to verifier subagents
 
@@ -58,19 +58,19 @@ For each delegation, provide the subagent with:
    - Collect all task groups that fall under the purview of this verifier (i.e. these tasks' implementers' verified_by specifies this verifier).
    - Provide to the verifier:
      1. Details of those task groups (parent task and sub-tasks) to the verifier for verification.
-     2. The spec file: `research-os/specs/[this-spec]/spec.md` for context.
+     2. The spec file: `research-os/artifacts/[this-spec]/spec.md` for context.
    - Instruct the verifier:
      1. Read and analyze these tasks and where they fit in the context of this spec.
      2. Run tests to verify implementation of these tasks.
-     3. Verify whether `research-os/specs/[this-spec]/tasks.md` has been updated to reflect these tasks' completeness.
-     4. Document your verification report and place this document in: `research-os/specs/[this-spec]/verification/`
+     3. Verify whether `research-os/artifacts/[this-spec]/tasks.md` has been updated to reflect these tasks' completeness.
+     4. Document your verification report and place this document in: `research-os/artifacts/[this-spec]/verification/`
 
 ### PHASE 4: Produce the final verification report
 
 Use the **implementation-verifier** subagent to do its implementation verification and produce its final verification report.
 
 Provide to the subagent the following:
-- The path to this spec: `research-os/specs/[this-spec]`
+- The path to this spec: `research-os/artifacts/[this-spec]`
 Instruct the subagent to do the following:
   1. Run all of its final verifications according to its built-in workflow
-  2. Produce the final verification report in `research-os/specs/[this-spec]/verifications/final-verification.md`.
+  2. Produce the final verification report in `research-os/artifacts/[this-spec]/verifications/final-verification.md`.

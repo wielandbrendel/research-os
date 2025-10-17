@@ -33,7 +33,7 @@ Read these materials that were provided to you so that you can use them as the b
 Perform these checks:
 
 #### Check 1: Requirements Accuracy
-Read `research-os/specs/[this-spec]/planning/requirements.md` and verify:
+Read `research-os/artifacts/[this-spec]/planning/requirements.md` and verify:
 - All user answers from the Q&A are accurately captured
 - No answers are missing or misrepresented
 - Any follow-up questions and answers are included
@@ -57,21 +57,21 @@ Perform these detailed content checks:
 
 #### Check 3: Visual Asset Analysis (if visuals exist)
 If visual files were found in Check 4:
-1. **Read each visual file** in `research-os/specs/[this-spec]/planning/visuals/`
+1. **Read each visual file** in `research-os/artifacts/[this-spec]/planning/visuals/`
 2. **Document what you observe**: UI components, layouts, colors, typography, spacing, interaction patterns
 3. **Verify these design elements appear in**:
-   - `research-os/specs/[this-spec]/spec.md` - Check if visual elements, layout or important visual details are present:
+   - `research-os/artifacts/[this-spec]/spec.md` - Check if visual elements, layout or important visual details are present:
      - Verification examples (depending on the visuals):
        * UI Components section matches visual components
        * Page Layouts section reflects visual layouts
        * Styling Guidelines align with visual design
-   - `research-os/specs/[this-spec]/tasks.md` - Confirm at least some tasks specifically reference:
+   - `research-os/artifacts/[this-spec]/tasks.md` - Confirm at least some tasks specifically reference:
      * Visual file names
      * Components shown in visuals
      * Layouts depicted in mockups
 
 #### Check 4: Requirements Deep Dive
-Read `research-os/specs/[this-spec]/planning/requirements.md` and create a mental list of:
+Read `research-os/artifacts/[this-spec]/planning/requirements.md` and create a mental list of:
 - **Explicit features requested**: What the user specifically said they want
 - **Constraints stated**: Limitations, performance needs, or technical requirements
 - **Out-of-scope items**: What the user explicitly said NOT to include
@@ -79,7 +79,7 @@ Read `research-os/specs/[this-spec]/planning/requirements.md` and create a menta
 - **Implicit needs**: Things implied but not directly stated
 
 #### Check 5: Core Specification Validation
-Read `research-os/specs/[this-spec]/spec.md` and verify each section:
+Read `research-os/artifacts/[this-spec]/spec.md` and verify each section:
 1. **Goal**: Must directly address the problem stated in initial requirements
 2. **User Stories**: The stories are relevant and aligned to the initial requirements
 3. **Core Requirements**: Only include features from the requirement stated explicit features
@@ -93,7 +93,7 @@ Look for these issues:
 - Missing reusability opportunities (if user provided any)
 
 #### Check 6: Task List Detailed Validation
-Read `research-os/specs/[this-spec]/tasks.md` and check each task group's tasks:
+Read `research-os/artifacts/[this-spec]/tasks.md` and check each task group's tasks:
 2. **Reusability References**: Tasks should note "(reuse existing: [name])" where applicable
 3. **Specificity**: Each task must reference a specific feature/component
 4. **Traceability**: Each task must trace back to requirements
@@ -110,7 +110,7 @@ Review all specifications for:
 
 ### Step 4: Document Findings and Issues
 
-Create `research-os/specs/[this-spec]/verification/spec-verification.md` with the following structure:
+Create `research-os/artifacts/[this-spec]/verification/spec-verification.md` with the following structure:
 
 ```markdown
 # Specification Verification Report

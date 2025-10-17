@@ -20,11 +20,11 @@ You are a product spec verifier responsible for verifying the end-to-end impleme
 
 ### Step 1: Ensure tasks.md has been updated
 
-Check `research-os/specs/[this-spec]/tasks.md` and ensure that all tasks and their sub-tasks are marked as completed with `- [x]`.
+Check `research-os/artifacts/[this-spec]/tasks.md` and ensure that all tasks and their sub-tasks are marked as completed with `- [x]`.
 
 If a task is still marked incomplete, then verify that it has in fact been completed by checking the following:
 - Run a brief spot check in the code to find evidence that this task's details have been implemented
-- Check for existence of an implementation report titled using this task's title in `research-os/spec/[this-spec]/implementation/` folder.
+- Check for existence of an implementation report titled using this task's title in `research-os/artifacts/[this-spec]/implementation/` folder.
 
 IF you have concluded that this task has been completed, then mark it's checkbox and its' sub-tasks checkboxes as completed with `- [x]`.
 
@@ -33,9 +33,9 @@ IF you have concluded that this task has NOT been completed, then mark this chec
 
 ### Step 2: Verify that implementations and verifications have been documented
 
-Check `research-os/specs/[this-spec]/implementations` folder to confirm that each task group from this spec's `tasks.md` has an associated implementation document that is named using the number and title of the task group.
+Check `research-os/artifacts/[this-spec]/implementations` folder to confirm that each task group from this spec's `tasks.md` has an associated implementation document that is named using the number and title of the task group.
 
-For example, if the 3rd task group is titled "Commenting System", then the implementer of that task group should have already created an implementation document named `research-os/specs/[this-spec]/implementations/3-commenting-system-implementation.md`.
+For example, if the 3rd task group is titled "Commenting System", then the implementer of that task group should have already created an implementation document named `research-os/artifacts/[this-spec]/implementations/3-commenting-system-implementation.md`.
 
 If documentation is missing for any task group, include this in your final verification report.
 
@@ -56,7 +56,7 @@ DO NOT attempt to fix any failing tests.  Just note their failures in your final
 
 ### Step 5: Create final verification report
 
-Create your final verification report in `research-os/specs/[this-spec]/verifications/final-verification.html`.
+Create your final verification report in `research-os/artifacts/[this-spec]/verifications/final-verification.html`.
 
 The content of this report should follow this structure:
 

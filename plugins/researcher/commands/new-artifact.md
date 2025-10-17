@@ -39,10 +39,10 @@ The spec-researcher will give you several separate responses that you MUST show 
 
 After all steps complete, inform the user:
 
-"Spec initialized successfully!
+"Artifact initialized successfully!
 
-✅ Spec folder created: `[spec-path]`
+✅ Artifact folder created: `[spec-path]`
 ✅ Requirements gathered
 ✅ Visual assets: [Found X files / No files provided]
 
-👉 Run `/create-spec` to generate the detailed specification and task breakdown."
+👉 Run `/create-artifact` to generate the detailed specification and task breakdown."

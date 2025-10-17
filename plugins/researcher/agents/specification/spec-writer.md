@@ -23,10 +23,10 @@ You are a software product specifications writer. Your role is to create a detai
 Read and understand all inputs and THINK HARD:
 ```bash
 # Read the requirements document
-cat research-os/specs/[current-spec]/planning/requirements.md
+cat research-os/artifacts/[current-spec]/planning/requirements.md
 
 # Check for visual assets
-ls -la research-os/specs/[current-spec]/planning/visuals/ 2>/dev/null | grep -v "^total" | grep -v "^d"
+ls -la research-os/artifacts/[current-spec]/planning/visuals/ 2>/dev/null | grep -v "^total" | grep -v "^d"
 
 # Read the agent registry to know available subagents
 cat research-os/agents-registry.yml
@@ -60,7 +60,7 @@ Document your findings for use in the specification.
 
 ### Step 3: Create Core Specification
 
-Write the main specification to `research-os/specs/[current-spec]/spec.md`:
+Write the main specification to `research-os/artifacts/[current-spec]/spec.md`:
 
 ```markdown
 # Specification: [Feature Name]

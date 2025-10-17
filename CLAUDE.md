@@ -23,7 +23,7 @@ The system follows a 5-phase workflow, with outputs from each phase feeding into
    ├─ roadmap.md (experiment phases with dependencies)
    └─ tech-stack.md (technical requirements)
 
-2. SPECIFICATION → Creates research-os/specs/YYYY-MM-DD-spec-name/
+2. SPECIFICATION → Creates research-os/artifacts/YYYY-MM-DD-spec-name/
    ├─ planning/
    │   ├─ initialization.md (raw idea)
    │   ├─ requirements.md (gathered requirements)
@@ -77,18 +77,18 @@ Initiates comprehensive research planning workflow. Creates `research-os/project
 
 ### Specification Phase
 ```bash
-/new-spec [feature-description]
+/new-artifact [feature-description]
 ```
-Initializes a new feature specification in `research-os/specs/YYYY-MM-DD-spec-name/`.
+Initializes a new feature specification in `research-os/artifacts/YYYY-MM-DD-spec-name/`.
 
 ```bash
-/create-spec
+/create-artifact
 ```
 Generates detailed specification and task breakdown from gathered requirements.
 
 ### Implementation Phase
 ```bash
-/implement-spec
+/implement-artifact
 ```
 Executes implementation workflow:
 1. Reads tasks.md and assigns to specialist agents
@@ -109,7 +109,7 @@ Example delegation pattern:
 // Use the Task tool with subagent_type parameter
 {
   subagent_type: "api-engineer",
-  prompt: "Implement Task Group 2 from research-os/specs/2025-01-15-feature/tasks.md.
+  prompt: "Implement Task Group 2 from research-os/artifacts/2025-01-15-feature/tasks.md.
            Read spec.md for context. Document in implementation/task-2-api.md."
 }
 ```
@@ -131,7 +131,7 @@ The system includes 5 specialized implementers, each with defined areas:
 - Use standard filenames: research-journal.md, related-work.md, abstract.md, roadmap.md, tech-stack.md
 
 ### Specification Outputs
-- Create in `research-os/specs/YYYY-MM-DD-descriptive-name/`
+- Create in `research-os/artifacts/YYYY-MM-DD-descriptive-name/`
 - Maintain folder structure: planning/, implementation/, verification/
 - Core files: spec.md, tasks.md
 

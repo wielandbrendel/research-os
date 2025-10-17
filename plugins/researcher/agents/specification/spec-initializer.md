@@ -53,7 +53,7 @@ SPEC_NAME="[kebab-case-name]"
 DATED_SPEC_NAME="${TODAY}-${SPEC_NAME}"
 
 # Store this path for output
-SPEC_PATH="research-os/specs/$DATED_SPEC_NAME"
+SPEC_PATH="research-os/artifacts/$DATED_SPEC_NAME"
 
 # Create folder structure following architecture
 mkdir -p $SPEC_PATH/planning

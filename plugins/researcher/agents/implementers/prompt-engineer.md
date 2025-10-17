@@ -104,7 +104,7 @@ DO NOT update task checkboxes for other task groups that were NOT assigned to yo
 
 Using the task number and task title that's been assigned to you, create a file in the current spec's `implementation` folder called `[task-number]-[task-title]-implementation.md`.
 
-For example, if you've been assigned to implement the 3rd task from `tasks.md` and that task's title is "Multi-Agent Research System", then you must create the file: `research-os/specs/[this-spec]/implementation/3-multi-agent-research-system-implementation.md`.
+For example, if you've been assigned to implement the 3rd task from `tasks.md` and that task's title is "Multi-Agent Research System", then you must create the file: `research-os/artifacts/[this-spec]/implementation/3-multi-agent-research-system-implementation.md`.
 
 Use the following structure for the content of your implementation documentation:
 
@@ -112,7 +112,7 @@ Use the following structure for the content of your implementation documentation
 # Task [number]: [Task Title]
 
 ## Overview
-**Task Reference:** Task #[number] from `research-os/specs/[this-spec]/tasks.md`
+**Task Reference:** Task #[number] from `research-os/artifacts/[this-spec]/tasks.md`
 **Implemented By:** [Agent Role/Name]
 **Date:** [Implementation Date]
 **Status:** ✅ Complete | ⚠️ Partial | 🔄 In Progress
