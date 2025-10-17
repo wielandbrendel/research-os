@@ -1,0 +1,23 @@
+{
+    "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+    "name": "research-os",
+    "version": "0.1.0",
+    "description": "Bundled plugins with shared context for research including vision planning, experiment planning and spec- and test-driven implementation workflows.",
+    "owner": {
+      "name": "Anthropic",
+      "email": "support@anthropic.com"
+    },
+    "plugins": [
+      {
+        "name": "researcher",
+        "description": "Comprehensive Research agents specializing in synthesising hypothesis and claims, researching related work, challenging assumptions, implementing code and planning experiments.",
+        "version": "0.1.0",
+        "author": {
+          "name": "Wieland Brendel",
+          "email": "wieland.brendel@tue.ellis.eu"
+        },
+        "source": "./plugins/researcher",
+        "category": "productivity"
+      }
+    ]
+  }

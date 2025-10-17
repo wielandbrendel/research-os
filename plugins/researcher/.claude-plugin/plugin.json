@@ -1,0 +1,9 @@
+{
+    "name": "researcher",
+    "description": "Comprehensive Research Planning agents specializing in synthesising hypothesis and claims, researching related work and challenging assumptions.",
+    "version": "0.1.0",
+        "author": {
+            "name": "Wieland Brendel",
+            "email": "wieland.brendel@tue.ellis.eu"
+    }
+}
