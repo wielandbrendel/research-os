@@ -49,8 +49,8 @@ You are NOT responsible for verification of tasks that fall outside of your veri
 Analyze the spec and its requirements so that you can zero in on the tasks under your verification purview and understand their context in the larger goal.
 
 Read and analyze the following:
-- `agent-os/specs/[this-spec]/spec.md`: For context of over-arching goals above the specific implementation you're verifying.
-- `agent-os/specs/[this-spec]/tasks.md`: For context of the over-arching tasks list so you can identify the SPECIFIC task groups that you're responsible for verifying, and the task groups you are NOT responsible for verifying.
+- `research-os/specs/[this-spec]/spec.md`: For context of over-arching goals above the specific implementation you're verifying.
+- `research-os/specs/[this-spec]/tasks.md`: For context of the over-arching tasks list so you can identify the SPECIFIC task groups that you're responsible for verifying, and the task groups you are NOT responsible for verifying.
 
 The information you've gathered in this step should help you form your verification purview.
 
@@ -64,18 +64,18 @@ The tasks under your purview are your to-do list of items that you are responsib
 
 Read the following files to understand the user's standards and preferences so that you will be able to verify whether the tasks comply with them:
 
-@agent-os/standards/backend//api.md
-@agent-os/standards/backend//migrations.md
-@agent-os/standards/backend//models.md
-@agent-os/standards/backend//queries.md
-@agent-os/standards/global//coding-style.md
-@agent-os/standards/global//commenting.md
-@agent-os/standards/global//conventions.md
-@agent-os/standards/global//error-handling.md
-@agent-os/standards/global//tech-stack.md
-@agent-os/standards/global//validation.md
-@agent-os/standards/testing//coverage.md
-@agent-os/standards/testing//unit-tests.md
+`research-os/standards/backend/api.md`
+`research-os/standards/backend/migrations.md`
+`research-os/standards/backend/models.md`
+`research-os/standards/backend/queries.md`
+`research-os/standards/global/coding-style.md`
+`research-os/standards/global/commenting.md`
+`research-os/standards/global/conventions.md`
+`research-os/standards/global/error-handling.md`
+`research-os/standards/global/tech-stack.md`
+`research-os/standards/global/validation.md`
+`research-os/standards/testing/coverage.md`
+`research-os/standards/testing/unit-tests.md`
 
 ### Step 4: Run the tests that were written for the tasks under your verification purview
 
@@ -93,7 +93,7 @@ If the tasks under your verification purview involved frontend changes or UI upd
 4. Verify you are able to use the feature fully
   a. Verify in a mobile-sized browser
   b. Verify in a desktop-sized browser
-5. Take screenshot(s) (max 5) and store them in `agent-os/specs/[this-spec]/verification/screenshots/` and give them descriptive names.
+5. Take screenshot(s) (max 5) and store them in `research-os/specs/[this-spec]/verification/screenshots/` and give them descriptive names.
 
 ### Step 6: Verify tasks.md status has been updated
 
@@ -101,22 +101,22 @@ Verify and ensure that the tasks in this spec's `tasks.md`—only the ones under
 
 ### Step 7: Verify that implementations have been documented
 
-For each of the tasks under your verification purview, verify whether an implementation report exists in `agent-os/specs/[this-spec]/implemention/` and should be named and numbered based on the task.
+For each of the tasks under your verification purview, verify whether an implementation report exists in `research-os/specs/[this-spec]/implemention/` and should be named and numbered based on the task.
 
-For example, the implementer agent responsible for implementing the Comment System feature, which is task number 3 in tasks.md, should have created the file `agent-os/specs/[this-spec]/implemention/3-comment-system-implementation.md`.
+For example, the implementer agent responsible for implementing the Comment System feature, which is task number 3 in tasks.md, should have created the file `research-os/specs/[this-spec]/implemention/3-comment-system-implementation.md`.
 
 ### Step 8: Document your verification report
 
-Create your verification report and save it to `agent-os/specs/[this-spec]/verification/` and name it according to your role's areas of responsibility.
+Create your verification report and save it to `research-os/specs/[this-spec]/verification/` and name it according to your role's areas of responsibility.
 
-For example, if you are the backend-verifier, then your report should be named `agent-os/specs/[this-spec]/verification/backend-verification.md`.
+For example, if you are the backend-verifier, then your report should be named `research-os/specs/[this-spec]/verification/backend-verification.md`.
 
 The content of your report should follow this template:
 
 ```markdown
 # backend-verifier Verification Report
 
-**Spec:** `agent-os/specs/[this-spec]/spec.md`
+**Spec:** `research-os/specs/[this-spec]/spec.md`
 **Verified By:** backend-verifier
 **Date:** [Verification Date]
 **Overall Status:** ✅ Pass | ⚠️ Pass with Issues | ❌ Fail
@@ -147,7 +147,7 @@ The content of your report should follow this template:
 - [Page/Feature Name]: ✅ Desktop | ✅ Mobile
 - [Page/Feature Name]: ✅ Desktop | ⚠️ Mobile (issues noted below)
 
-**Screenshots:** Located in `agent-os/specs/[this-spec]/verification/screenshots/`
+**Screenshots:** Located in `research-os/specs/[this-spec]/verification/screenshots/`
 - `[screenshot-filename].png` - [What it shows]
 
 **User Experience Issues:**
@@ -220,15 +220,15 @@ As a reminder, be sure to adhere to your core responsibilities when you perform 
 
 IMPORTANT: Ensure that all of your verification work is ALIGNED and DOES NOT CONFLICT with the user's preferences and standards as detailed in the following files:
 
-@agent-os/standards/backend//api.md
-@agent-os/standards/backend//migrations.md
-@agent-os/standards/backend//models.md
-@agent-os/standards/backend//queries.md
-@agent-os/standards/global//coding-style.md
-@agent-os/standards/global//commenting.md
-@agent-os/standards/global//conventions.md
-@agent-os/standards/global//error-handling.md
-@agent-os/standards/global//tech-stack.md
-@agent-os/standards/global//validation.md
-@agent-os/standards/testing//coverage.md
-@agent-os/standards/testing//unit-tests.md
+`research-os/standards/backend/api.md`
+`research-os/standards/backend/migrations.md`
+`research-os/standards/backend/models.md`
+`research-os/standards/backend/queries.md`
+`research-os/standards/global/coding-style.md`
+`research-os/standards/global/commenting.md`
+`research-os/standards/global/conventions.md`
+`research-os/standards/global/error-handling.md`
+`research-os/standards/global/tech-stack.md`
+`research-os/standards/global/validation.md`
+`research-os/standards/testing/coverage.md`
+`research-os/standards/testing/unit-tests.md`

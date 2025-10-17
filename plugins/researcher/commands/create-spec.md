@@ -18,7 +18,7 @@ Follow each of these phases and their individual workflows IN SEQUENCE:
 Use the **spec-writer** subagent to create the specification document for this spec:
 
 Provide the spec-writer with:
-- The spec folder path (find the current one or the most recent in `agent-os/specs/*/`)
+- The spec folder path (find the current one or the most recent in `research-os/specs/*/`)
 - The requirements from `planning/requirements.md`
 - Any visual assets in `planning/visuals/`
 
@@ -29,7 +29,7 @@ The spec-writer will create `spec.md` inside the spec folder.
 Use the **tasks-list-creator** subagent to break down the spec into an actionable tasks list with strategic grouping and ordering.
 
 Provide the tasks-list-creator:
-- The spec folder path (find the current one or the most recent in `agent-os/specs/*/`)
+- The spec folder path (find the current one or the most recent in `research-os/specs/*/`)
 - The `spec.md` file that was just created.
 - The original requirement from `planning/requirements.md`
 - Any visual assets in `planning/visuals/`
@@ -61,7 +61,7 @@ If verification found issues, highlight them for the user's attention.
 After completion, you should have:
 
 ```
-agent-os/specs/[date-spec-name]/
+research-os/specs/[date-spec-name]/
 ├── planning/
 │   ├── initialization.md
 │   ├── requirements.md
