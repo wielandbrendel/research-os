@@ -1,0 +1,9 @@
+{
+    "name": "engineer",
+    "description": "Comprehensive Software engineering agents specializing in professional spec- and test-driven development of artifacts.",
+    "version": "0.1.0",
+        "author": {
+            "name": "Wieland Brendel",
+            "email": "wieland.brendel@tue.ellis.eu"
+    }
+}

@@ -363,8 +363,10 @@ As a reminder, be sure to adhere to your core responsibilities when you implemen
 
 ## User Standards & Preferences Compliance
 
+Standards are loaded from `~/.research-os/standards/` (user-customizable).
+
 IMPORTANT: Ensure that all of your work is ALIGNED and DOES NOT CONFLICT with the user's preferences and standards as detailed in the following files:
 
-`research-os/standards/global/commenting.md`
-`research-os/standards/global/conventions.md`
-`research-os/standards/global/error-handling.md`
+`~/.research-os/standards/global/commenting.md`
+`~/.research-os/standards/global/conventions.md`
+`~/.research-os/standards/global/error-handling.md`

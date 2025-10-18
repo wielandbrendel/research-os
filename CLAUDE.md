@@ -4,26 +4,39 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Repository Overview
 
-**research-os** is a Claude Code plugin ecosystem that provides an integrated research-to-implementation workflow. It's a spec-based research engineering system with specialized AI agents for each phase of development.
+**research-os** is a Claude Code dual-plugin ecosystem that separates research planning from engineering implementation. It provides two independent, marketplace-compatible plugins that can be used individually or together.
 
-The repository implements a **marketplace-compatible plugin** (`plugins/researcher/`) that contains:
-- **25 specialized subagents** organized by workflow phase
-- **4 user-facing commands** that orchestrate multi-agent workflows
-- **Structured output artifacts** in markdown format
+The repository implements **two specialized plugins**:
+
+### Researcher Plugin (`plugins/researcher/`)
+- **5 research-focused agents** for hypothesis development and planning
+- **1 command** (`/plan-research`) for comprehensive research documentation
+- **Output**: Research documentation in `research-os/project/`
+- **Focus**: Research hypothesis, literature review, experiment planning
+
+### Engineer Plugin (`plugins/engineer/`)
+- **12 engineering agents** organized across specification, implementation, and verification
+- **3 commands** (`/new-artifact`, `/create-artifact`, `/implement-artifact`)
+- **Output**: Implemented artifacts in `research-os/artifacts/YYYY-MM-DD-*/`
+- **Focus**: Professional spec-driven development with verification
 
 ## Architecture & Workflow
 
-The system follows a 5-phase workflow, with outputs from each phase feeding into the next:
+The dual-plugin system separates research planning from engineering implementation:
 
+### Researcher Plugin Workflow
 ```
-1. RESEARCH PLANNING → Creates research-os/project/
-   ├─ research-journal.md (iterative refinement history)
-   ├─ related-work.md (literature review)
-   ├─ abstract.md (positioned abstract with hypothetical results)
-   ├─ roadmap.md (experiment phases with dependencies)
-   └─ tech-stack.md (technical requirements)
+RESEARCH PLANNING → Creates research-os/project/
+├─ research-journal.md (iterative refinement history)
+├─ related-work.md (literature review)
+├─ abstract.md (positioned abstract with hypothetical results)
+├─ roadmap.md (experiment phases with dependencies)
+└─ tech-stack.md (technical requirements)
+```
 
-2. SPECIFICATION → Creates research-os/artifacts/YYYY-MM-DD-spec-name/
+### Engineer Plugin Workflow
+```
+1. SPECIFICATION → Creates research-os/artifacts/YYYY-MM-DD-artifact-name/
    ├─ planning/
    │   ├─ initialization.md (raw idea)
    │   ├─ requirements.md (gathered requirements)
@@ -31,15 +44,17 @@ The system follows a 5-phase workflow, with outputs from each phase feeding into
    ├─ spec.md (detailed specification)
    └─ tasks.md (strategic task breakdown)
 
-3. IMPLEMENTATION → Updates spec folder with:
-   ├─ planning/task-assignments.yml
+2. IMPLEMENTATION → Updates artifact folder with:
    └─ implementation/ (reports per task group)
 
-4. VERIFICATION → Adds to spec folder:
+3. VERIFICATION → Adds to artifact folder:
    └─ verification/ (verification reports)
 
-5. FINAL OUTPUT → Complete documented implementation
+4. FINAL OUTPUT → Complete documented implementation
 ```
+
+### Integration Flow
+Research outputs from the Researcher plugin can inform artifact development in the Engineer plugin, but each plugin operates independently.
 
 ## Plugin System Structure
 
@@ -69,24 +84,34 @@ Commands in `plugins/researcher/commands/` are markdown files that:
 
 ## Key Commands
 
-### Research Planning Phase
+### Researcher Plugin Commands
 ```bash
 /plan-research
 ```
-Initiates comprehensive research planning workflow. Creates `research-os/project/` with all research documentation.
+Initiates comprehensive research planning workflow. Creates `research-os/project/` with:
+- Research journal (iterative refinement)
+- Related work analysis
+- Abstract with hypothetical results
+- Experiment roadmap
+- Technical stack documentation
 
-### Specification Phase
+### Engineer Plugin Commands
 ```bash
 /new-artifact [feature-description]
 ```
-Initializes a new feature specification in `research-os/artifacts/YYYY-MM-DD-spec-name/`.
+Initializes a new artifact specification in `research-os/artifacts/YYYY-MM-DD-artifact-name/`.
+- Gathers requirements through targeted questions
+- Processes visual assets if provided
+- Creates planning documentation
 
 ```bash
 /create-artifact
 ```
 Generates detailed specification and task breakdown from gathered requirements.
+- Analyzes requirements and context
+- Creates comprehensive spec.md
+- Generates strategic tasks.md with agent assignments
 
-### Implementation Phase
 ```bash
 /implement-artifact
 ```
@@ -114,9 +139,9 @@ Example delegation pattern:
 }
 ```
 
-## Implementation Specialists
+## Implementation Specialists (Engineer Plugin)
 
-The system includes 5 specialized implementers, each with defined areas:
+The Engineer plugin includes 5 specialized implementers, each with defined areas:
 
 - **api-engineer**: API endpoints, controllers, business logic, request/response
 - **database-engineer**: Migrations, models, schemas, database queries
@@ -154,32 +179,80 @@ Agents reference these via `{{standards/global/*}}` template syntax.
 ## Development Notes
 
 ### Adding New Agents
+
+#### For Researcher Plugin
 1. Create agent definition in `plugins/researcher/agents/`
 2. Follow YAML frontmatter pattern
+3. Focus on research-oriented capabilities
+4. Update plugin.json if needed
+
+#### For Engineer Plugin
+1. Create agent definition in `plugins/engineer/agents/`
+2. Follow YAML frontmatter pattern
 3. Define clear areas of specialization
-4. Update implementers.yml or verifiers.yml if applicable
+4. Place in appropriate subdirectory (specification/, implementers/, verifiers/)
 
 ### Adding New Commands
-1. Create command in `plugins/researcher/commands/`
-2. Define phase-based workflow
-3. Delegate to existing agents via Task tool
-4. Ensure proper artifact passing between phases
 
-### Extending the Plugin
-To extend for pure software engineering (removing research focus):
-1. Modify phase 1 commands to skip research planning
-2. Start directly with specification phase
-3. Adjust agent prompts to remove research-specific language
-4. Keep implementation and verification phases intact
+#### For Researcher Plugin
+1. Create command in `plugins/researcher/commands/`
+2. Focus on research workflow phases
+3. Delegate to research agents via Task tool
+4. Output to `research-os/project/`
+
+#### For Engineer Plugin
+1. Create command in `plugins/engineer/commands/`
+2. Define phase-based workflow (spec/implement/verify)
+3. Delegate to engineering agents via Task tool
+4. Output to `research-os/artifacts/`
+
+### Extending the Plugins
+- **Researcher Plugin**: Add more research methodologies, literature review tools, hypothesis validation
+- **Engineer Plugin**: Add more implementation specialists, verification frameworks, or domain-specific agents
+- **Both**: Maintain clear separation of concerns between research and engineering
 
 ## Current State
 
-The system is partially adapted for research engineering:
-- **Fully adapted**: Research planning phase (all agents and commands)
-- **Partially adapted**: Specification phase (retains some software-only language)
-- **To be adapted**: Implementation and verification phases still use general software engineering terminology
+The system is fully functional with two production-ready plugins:
 
-Future work involves updating remaining agents to align with research engineering context while maintaining the robust multi-phase, multi-agent architecture.
+### Researcher Plugin
+- **Status**: Production-ready
+- **Agents**: 5 research-focused agents
+- **Command**: `/plan-research`
+- **Output**: Comprehensive research documentation
+- **Use Case**: Research planning, hypothesis development, literature review
+
+### Engineer Plugin
+- **Status**: Production-ready
+- **Agents**: 12 engineering agents across 3 phases
+- **Commands**: `/new-artifact`, `/create-artifact`, `/implement-artifact`
+- **Output**: Implemented code with specifications
+- **Features**: Standards enforcement, automatic code checking (ruff), verification framework
+
+## Dual-Plugin Integration
+
+### Using Plugins Together
+While each plugin operates independently, they can be used sequentially:
+
+1. **Research First** (Researcher Plugin):
+   - Run `/plan-research` to develop research hypothesis
+   - Generate roadmap and technical requirements
+   - Document experiment phases
+
+2. **Then Implement** (Engineer Plugin):
+   - Use `/new-artifact` to start implementation
+   - Reference research outputs from `research-os/project/`
+   - Build artifacts based on research roadmap
+
+### Independent Usage
+Each plugin can also be used standalone:
+- **Researcher Only**: For pure research planning without implementation
+- **Engineer Only**: For traditional software development with spec-driven approach
+
+### File Organization
+- **Research outputs**: `research-os/project/`
+- **Engineering artifacts**: `research-os/artifacts/YYYY-MM-DD-*/`
+- **User standards**: `~/.research-os/standards/` (customizable)
 
 ## Ressources
 

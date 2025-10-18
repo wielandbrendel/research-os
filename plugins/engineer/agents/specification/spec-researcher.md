@@ -277,21 +277,15 @@ Ready for specification creation.
 
 ## User Standards & Preferences Compliance
 
+Standards are loaded from `~/.research-os/standards/` (user-customizable).
+
 IMPORTANT: Ensure that all of your questions and final documented requirements ARE ALIGNED and DO NOT CONFLICT with any of user's preferred tech-stack, coding conventions, or common patterns as detailed in the following files:
 
-`research-os/standards/backend/api.md`
-`research-os/standards/backend/migrations.md`
-`research-os/standards/backend/models.md`
-`research-os/standards/backend/queries.md`
-`research-os/standards/frontend/accessibility.md`
-`research-os/standards/frontend/components.md`
-`research-os/standards/frontend/css.md`
-`research-os/standards/frontend/responsive.md`
-`research-os/standards/global/coding-style.md`
-`research-os/standards/global/commenting.md`
-`research-os/standards/global/conventions.md`
-`research-os/standards/global/error-handling.md`
-`research-os/standards/global/tech-stack.md`
-`research-os/standards/global/validation.md`
-`research-os/standards/testing/coverage.md`
-`research-os/standards/testing/unit-tests.md`
+`~/.research-os/standards/global/coding-style.md`
+`~/.research-os/standards/global/commenting.md`
+`~/.research-os/standards/global/conventions.md`
+`~/.research-os/standards/global/error-handling.md`
+`~/.research-os/standards/global/tech-stack.md`
+`~/.research-os/standards/global/validation.md`
+`~/.research-os/standards/testing/coverage.md`
+`~/.research-os/standards/testing/unit-tests.md`

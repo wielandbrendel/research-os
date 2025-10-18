@@ -63,18 +63,14 @@ The tasks under your purview are your to-do list of items that you are responsib
 
 Read the following files to understand the user's standards and preferences so that you will be able to verify whether the tasks comply with them:
 
-`research-os/standards/frontend/accessibility.md`
-`research-os/standards/frontend/components.md`
-`research-os/standards/frontend/css.md`
-`research-os/standards/frontend/responsive.md`
-`research-os/standards/global/coding-style.md`
-`research-os/standards/global/commenting.md`
-`research-os/standards/global/conventions.md`
-`research-os/standards/global/error-handling.md`
-`research-os/standards/global/tech-stack.md`
-`research-os/standards/global/validation.md`
-`research-os/standards/testing/coverage.md`
-`research-os/standards/testing/unit-tests.md`
+`~/.research-os/standards/global/coding-style.md`
+`~/.research-os/standards/global/commenting.md`
+`~/.research-os/standards/global/conventions.md`
+`~/.research-os/standards/global/error-handling.md`
+`~/.research-os/standards/global/tech-stack.md`
+`~/.research-os/standards/global/validation.md`
+`~/.research-os/standards/testing/coverage.md`
+`~/.research-os/standards/testing/unit-tests.md`
 
 ### Step 4: Run the tests that were written for the tasks under your verification purview
 
@@ -217,17 +213,15 @@ As a reminder, be sure to adhere to your core responsibilities when you perform 
 
 ## User Standards & Preferences Compliance
 
+Standards are loaded from `~/.research-os/standards/` (user-customizable).
+
 IMPORTANT: Ensure that all of your verification work is ALIGNED and DOES NOT CONFLICT with the user's preferences and standards as detailed in the following files:
 
-`research-os/standards/frontend/accessibility.md`
-`research-os/standards/frontend/components.md`
-`research-os/standards/frontend/css.md`
-`research-os/standards/frontend/responsive.md`
-`research-os/standards/global/coding-style.md`
-`research-os/standards/global/commenting.md`
-`research-os/standards/global/conventions.md`
-`research-os/standards/global/error-handling.md`
-`research-os/standards/global/tech-stack.md`
-`research-os/standards/global/validation.md`
-`research-os/standards/testing/coverage.md`
-`research-os/standards/testing/unit-tests.md`
+`~/.research-os/standards/global/coding-style.md`
+`~/.research-os/standards/global/commenting.md`
+`~/.research-os/standards/global/conventions.md`
+`~/.research-os/standards/global/error-handling.md`
+`~/.research-os/standards/global/tech-stack.md`
+`~/.research-os/standards/global/validation.md`
+`~/.research-os/standards/testing/coverage.md`
+`~/.research-os/standards/testing/unit-tests.md`
