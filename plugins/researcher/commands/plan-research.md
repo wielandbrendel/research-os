@@ -1,10 +1,10 @@
 ## Research Planning Process
 
-You are helping to plan and document a research project with an abstract, experiment roadmap, and technical requirements. This will include:
+You are helping to plan and document a research project with a mission, experiment roadmap, and technical requirements. This will include:
 
 - **Iterative Refinement**: Through intelligent questioning and related work discovery, refine the research vision
 - **Related Work Discovery**: Find and document relevant prior work to position the research
-- **Abstract Document**: Create a professional research abstract with hypothetical results
+- **Mission Document**: Create a professional research mission with hypothetical results
 - **Experiment Roadmap**: Create a dependency-based experimental plan with minimum triage experiment
 - **Tech Stack**: Document technical requirements, datasets, and evaluation metrics
 
@@ -22,12 +22,12 @@ The gather-research-info agent will:
 - Create `research-os/project/research-journal.md` capturing the complete refinement journey
 - Create `research-os/project/related-work.md` consolidating all discovered literature
 
-### PHASE 2: Create Research Abstract
+### PHASE 2: Create Research Mission
 
-Use the **create-research-abstract** agent to turn the research idea into a a compelling paper abstract for a top-tier venue.
+Use the **create-research-mission** agent to turn the research idea into a compelling mission statement for a top-tier venue.
 
-The create-research-abstract agent will:
-- Create `research-os/project/abstract.md` with positioned abstract and hypothetical results
+The create-research-mission agent will:
+- Create `research-os/project/mission.md` with positioned mission and hypothetical results
 
 ### PHASE 3: Create Experiment Roadmap
 
@@ -45,7 +45,7 @@ Verify all files created successfully:
 
 ```bash
 # Validate all research planning files exist
-for file in research-journal.md related-work.md abstract.md roadmap.md tech-stack.md; do
+for file in research-journal.md related-work.md mission.md roadmap.md tech-stack.md; do
     if [ ! -f "research-os/project/$file" ]; then
         echo "Error: Missing $file"
     else
@@ -74,6 +74,6 @@ Upon completion, the following files should have been created and delivered to t
 
 - `research-os/project/research-journal.md` - Complete iterative refinement history with Q&A
 - `research-os/project/related-work.md` - Consolidated literature review from searches
-- `research-os/project/abstract.md` - Research abstract with hypothetical results
+- `research-os/project/mission.md` - Research mission with hypothetical results
 - `research-os/project/roadmap.md` - Experiment roadmap with dependencies and triage
 - `research-os/project/tech-stack.md` - Technical requirements and evaluation protocols

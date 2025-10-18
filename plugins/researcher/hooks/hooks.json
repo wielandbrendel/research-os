@@ -1,0 +1,16 @@
+{
+  "hooks": {
+    "UserPromptSubmit": [
+      {
+        "matcher": ".*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "uv run \"${CLAUDE_PLUGIN_ROOT}/scripts/init_project.py\"",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  }
+}

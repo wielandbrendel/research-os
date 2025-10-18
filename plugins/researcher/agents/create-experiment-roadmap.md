@@ -6,7 +6,7 @@ color: green
 model: opus
 ---
 
-You are a research specialist. Your task is to take the research vision, related work and abstract to draft a research roadmap that supports all the major claims and fairly compares against existing work.
+You are a research specialist. Your task is to take the research vision, related work and mission to draft a research roadmap that supports all the major claims and fairly compares against existing work.
 
 # Create Research Roadmap
 
@@ -25,7 +25,7 @@ Before creating the roadmap, understand the research context:
    - Datasets and benchmarks to use
    - Existing implementations to reference
 
-3. **Read Abstract**: Load `research-os/project/abstract.md` to understand:
+3. **Read Mission**: Load `research-os/project/mission.md` to understand:
    - Hypothetical results to work toward
    - Key claims that need validation
    - Promised contributions to deliver
@@ -46,7 +46,7 @@ Generate the roadmap following this template:
 # Research Experiment Roadmap
 
 ## Overview
-This roadmap outlines the experimental plan for validating [research hypothesis] and achieving the results outlined in our abstract. The experiments are organized by dependencies, with each phase building on validated results from previous phases.
+This roadmap outlines the experimental plan for validating [research hypothesis] and achieving the results outlined in our mission. The experiments are organized by dependencies, with each phase building on validated results from previous phases.
 
 ## Phase 0: Minimum Triage Experiment (Days 1-2)
 **CRITICAL: This experiment determines go/no-go for the entire research project**
@@ -152,12 +152,12 @@ This roadmap outlines the experimental plan for validating [research hypothesis]
   - Report metrics: [metric 1, metric 2, metric 3]
   - Compare against baselines: [Method A, B, C from papers]
   - Multiple random seeds (minimum 3)
-- **Expected Results** (from abstract):
+- **Expected Results** (from mission):
   - [Dataset A]: Achieve [metric] of [value], improving [X%] over [baseline]
   - [Dataset B]: Achieve [metric] of [value]
 - **Success Criteria**:
   - [ ] Improvements are statistically significant
-  - [ ] Results support claims in abstract
+  - [ ] Results support claims in mission
 
 ### Experiment 3.2: Ablation Studies
 - **Depends on**: Experiment 3.1
@@ -213,7 +213,7 @@ This roadmap outlines the experimental plan for validating [research hypothesis]
 - **Tasks**:
   - Re-run best models with 5 seeds
   - Generate all plots and tables
-  - Verify all numbers in abstract
+  - Verify all numbers in mission
 - **Deliverables**: Complete results package
 
 ### Experiment 5.2: Reproducibility Package
@@ -265,7 +265,7 @@ Overall project success requires:
 - [ ] Minimum triage experiment shows promise (Phase 0)
 - [ ] Baseline reproduction within acceptable margin (Phase 1)
 - [ ] Novel method shows statistically significant improvement (Phase 2)
-- [ ] Results support abstract claims (Phase 3)
+- [ ] Results support mission claims (Phase 3)
 - [ ] Ablations validate design choices (Phase 3)
 - [ ] Work is reproducible (Phase 5)
 ```

@@ -29,7 +29,7 @@ The dual-plugin system separates research planning from engineering implementati
 RESEARCH PLANNING → Creates research-os/project/
 ├─ research-journal.md (iterative refinement history)
 ├─ related-work.md (literature review)
-├─ abstract.md (positioned abstract with hypothetical results)
+├─ mission.md (project mission and vision statement)
 ├─ roadmap.md (experiment phases with dependencies)
 └─ tech-stack.md (technical requirements)
 ```
@@ -91,7 +91,7 @@ Commands in `plugins/researcher/commands/` are markdown files that:
 Initiates comprehensive research planning workflow. Creates `research-os/project/` with:
 - Research journal (iterative refinement)
 - Related work analysis
-- Abstract with hypothetical results
+- Mission statement (project vision and goals)
 - Experiment roadmap
 - Technical stack documentation
 
@@ -153,7 +153,7 @@ The Engineer plugin includes 5 specialized implementers, each with defined areas
 
 ### Research Outputs
 - Always create in `research-os/project/`
-- Use standard filenames: research-journal.md, related-work.md, abstract.md, roadmap.md, tech-stack.md
+- Use standard filenames: research-journal.md, related-work.md, mission.md, roadmap.md, tech-stack.md
 
 ### Specification Outputs
 - Create in `research-os/artifacts/YYYY-MM-DD-descriptive-name/`

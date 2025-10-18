@@ -1,0 +1,9 @@
+[project]
+name = "research-os-researcher"
+version = "0.1.0"
+description = "Research-OS researcher plugin hook scripts"
+requires-python = ">=3.8"
+dependencies = []
+
+[tool.uv]
+dev-dependencies = []
