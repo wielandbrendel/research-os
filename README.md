@@ -2,7 +2,7 @@
 
 **An agentic research engineering ecosystem for Claude Code**
 
-Research-OS is an orchestration system built on top of Claude Code that combines rigorous research planning with professional engineering implementation. It provides a structured workflow for transforming research ideas into fully implemented, production-ready code through spec- and test-driven development principles with sophisticated context engineering.
+Research-OS is an orchestration system built on top of Claude Code that combines rigorous research planning with spec- and test-driven engineering. It provides a structured workflow for transforming research ideas into fully implemented, production-ready code through spec- and test-driven development principles with sophisticated context engineering.
 
 ## Overview
 
