@@ -10,11 +10,14 @@ You are helping to plan and document a research project with a mission, experime
 
 This process will create these files in `research-os/project/` directory.
 
+After each phase (described below), stop the process and wait for the user to explicitly allow you to continue.
+When you start a new phase, read the generated files from previous phases again to make sure that no changes by the user have been overlooked.
+
 ### PHASE 1: Iterative Research Refinement & Related Work Discovery
 
-Use the **gather-research-info** subagent to iteratively refine the research idea and create comprehensive documentation.
+Use the **@gather-research-info** subagent to iteratively refine the research idea and create comprehensive documentation.
 
-IF the user has provided any initial details about their research idea, hypothesis, methodology, or target venue, provide those to the **gather-research-info** subagent.
+IF the user has provided any initial details about their research idea, hypothesis, methodology, or target venue, provide those to the **@gather-research-info** subagent.
 
 The gather-research-info agent will:
 - Iteratively refine the research idea through multiple rounds of intelligent questioning
@@ -22,12 +25,16 @@ The gather-research-info agent will:
 - Create `research-os/project/research-journal.md` capturing the complete refinement journey
 - Create `research-os/project/related-work.md` consolidating all discovered literature
 
+Stop and ask the user if the generated content is all right.
+
 ### PHASE 2: Create Research Mission
 
-Use the **create-research-mission** agent to turn the research idea into a compelling mission statement for a top-tier venue.
+Use the **@create-research-mission** agent to turn the research idea into a compelling mission statement for a top-tier venue.
 
 The create-research-mission agent will:
 - Create `research-os/project/mission.md` with positioned mission and hypothetical results
+
+Stop and ask the user if the generated content is all right.
 
 ### PHASE 3: Create Experiment Roadmap
 
@@ -38,6 +45,8 @@ The create-experiment-roadmap agent will:
 
 The document-tech-stack agent will:
 - Create `research-os/project/tech-stack.md` documenting frameworks, datasets, and metrics
+
+Stop and ask the user if the generated content is all right.
 
 ### PHASE 5: Final Validation
 
