@@ -19,9 +19,9 @@ The idea-assessment agent will:
 - Create `research-os/project/research-journal.md` documenting the exploration
 - Create `research-os/project/assessment.md` with detailed critique and questions
 
-**Important**: Ensure `idea.md` exists before starting. If it doesn't exist, inform the user:
+**Important**: Ensure `research-os/project/idea.md` exists before starting. If it doesn't exist, inform the user:
 ```
-Please create idea.md with your research idea first, then run /brainstorm again.
+Please create research-os/project/idea.md with your research idea first, then run /brainstorm again.
 ```
 
 ### PHASE 2: Assessment Refinement
@@ -86,7 +86,7 @@ Please provide your thoughts on these questions and the proposed approaches. You
 
 5. Wait for the user to provide their responses to the questions.
 
-### PHASE 4: Update idea.md with Refined Vision
+### PHASE 4: Update research-os/project/idea.md with Refined Vision
 
 Once the user provides their responses:
 
@@ -111,12 +111,12 @@ Display to the user:
 Your idea has been refined based on the assessment and your responses!
 
 The following files have been updated:
-✓ idea.md (refined research idea)
+✓ research-os/project/idea.md (refined research idea)
 ✓ research-os/project/assessment.md (critical assessment)
 ✓ research-os/project/research-journal.md (related work exploration)
 
 You can now:
-1. Review the updated idea.md to see the refined version
+1. Review the updated research-os/project/idea.md to see the refined version
 2. Run /brainstorm again for another iteration of refinement
 3. When satisfied with the idea, run /plan-research to create a full research plan
 
