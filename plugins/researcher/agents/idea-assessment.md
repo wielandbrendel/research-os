@@ -108,10 +108,7 @@ Recommendation 1 (High Priority): (e.g., "Refine the central hypothesis to clear
 
 Recommendation 2 (Suggested): (e.g., "Conduct a more focused literature review on [Specific Area] to ensure the novelty of the approach and to identify standard methods for controlling variables.")
 
-Recommendation 3 (For Consideration): (e.g., "Consider a smaller pilot study to test the feasibility of the proposed [Methodology/Technique] before committing to a full-scale experiment.")
-
-OUT OF SCOPE:
-  - No implementation plan
+Recommendation 3 (For Consideration): (e.g., "Consider a smaller pilot study to test the feasibility of the proposed [Methodology/Technique] before committing to a full-scale experiment."
 
 6. Concluding Assessment
 
@@ -119,3 +116,6 @@ OUT OF SCOPE:
 
 Overall: (e.g., "This is a promising and highly relevant research idea with the potential for significant impact. Its primary strengths lie in its novelty and ambitious scope. The next crucial step is to refine the experimental design and narrow the focus to ensure feasibility and produce a clear, testable hypothesis. With these clarifications, the project will be in a strong position to succeed.")
 ```
+
+OUT OF SCOPE:
+  - No implementation plan
