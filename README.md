@@ -32,7 +32,7 @@ This separation enables:
 - Automated verification and testing
 
 ### 🤖 Multi-Agent Orchestration
-- 17 specialized agents across research and engineering domains
+- 19 specialized agents across research and engineering domains
 - Intelligent task delegation based on agent expertise
 - Parallel execution for independent tasks
 - Context passing between agents via file artifacts
@@ -61,9 +61,40 @@ For more details on the Claude Code plugin system, see the [official documentati
 
 ## Usage
 
+### Phase 0: Idea Brainstorming (Optional but Recommended)
+
+Start by brainstorming and refining your initial research idea:
+
+**Step 1:** Create `research-os/project/idea.md` with your initial research concept:
+```markdown
+# Initial Research Idea
+
+[Your research idea, hypothesis, or problem statement]
+```
+
+**Step 2:** Run the brainstorm command:
+```bash
+/brainstorm
+```
+
+This iterative refinement command will:
+1. **Assess your idea**: Perform extensive related work research and create a critical assessment
+2. **Refine the assessment**: Verify claims and focus on substantive concerns
+3. **Present key questions**: Extract the 3 most crucial questions with context and potential approaches
+4. **Update your idea**: Incorporate your responses to improve `idea.md`
+
+Output is created in `research-os/project/`:
+- `idea.md` - Your refined research idea (updated after each iteration)
+- `assessment.md` - Critical assessment with strengths, weaknesses, and recommendations
+- `research-journal.md` - Related work exploration and searches
+
+**Iterate:** Run `/brainstorm` multiple times to progressively refine your research concept. Each iteration deepens the analysis and sharpens the focus.
+
+When satisfied with your refined idea, proceed to full research planning with `/plan-research`.
+
 ### Phase 1: Research Planning
 
-Start with the Researcher plugin to develop your research vision:
+Develop your comprehensive research vision with the Researcher plugin:
 
 ```bash
 /plan-research
@@ -126,7 +157,9 @@ Output is organized in `research-os/artifacts/YYYY-MM-DD-artifact-name/`:
 
 ## Agent Ecosystem
 
-### Researcher Plugin Agents (5)
+### Researcher Plugin Agents (7)
+- **idea-assessment**: Critical assessment of research ideas with extensive related work analysis
+- **assessment-refiner**: Meta-analysis and refinement of research assessments for maximum utility
 - **gather-research-info**: Iterative research hypothesis development
 - **create-research-mission**: Mission statement and vision crafting
 - **create-experiment-roadmap**: Experiment planning with dependencies
@@ -186,7 +219,15 @@ Create your own standards in `~/.research-os/standards/`:
 
 ### Example: Building a Research Tool
 ```bash
-# Phase 1: Research
+# Phase 0: Brainstorming (Optional but Recommended)
+# Create research-os/project/idea.md with initial concept
+/brainstorm
+# Performs critical assessment with related work analysis
+# Presents 3 key questions with potential approaches
+# Refines research-os/project/idea.md based on your responses
+# (Can iterate multiple times)
+
+# Phase 1: Research Planning
 /plan-research
 # Develops hypothesis for novel visualization approach
 # Researches existing tools and methods
