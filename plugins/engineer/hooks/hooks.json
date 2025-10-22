@@ -6,6 +6,10 @@
         "hooks": [
           {
             "type": "command",
+            "command": "\"${CLAUDE_PLUGIN_ROOT}/scripts/check_uv.sh\""
+          },
+          {
+            "type": "command",
             "command": "uv run \"${CLAUDE_PLUGIN_ROOT}/scripts/setup_standards.py\""
           }
         ]
