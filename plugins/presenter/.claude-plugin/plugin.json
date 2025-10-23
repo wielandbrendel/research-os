@@ -1,0 +1,9 @@
+{
+    "name": "presenter",
+    "description": "Scientific presentation agents and skills specializing in professional, insightful and engaging research presentations.",
+    "version": "0.1.0",
+        "author": {
+            "name": "Wieland Brendel",
+            "email": "wieland.brendel@tue.ellis.eu"
+    }
+}
