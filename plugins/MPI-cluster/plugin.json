@@ -1,0 +1,13 @@
+{
+  "name": "MPI-cluster",
+  "version": "1.0.0",
+  "description": "HTCondor job submission for MPI cluster",
+  "author": "research-os",
+  "skills": [
+    {
+      "name": "job-submission",
+      "description": "Submit jobs to MPI cluster using HTCondor",
+      "file": "skills/job-submission.md"
+    }
+  ]
+}

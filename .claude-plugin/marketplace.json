@@ -40,6 +40,17 @@
           },
           "source": "./plugins/presenter",
           "category": "productivity"
+      },
+      {
+          "name": "MPI-cluster",
+          "description": "HTCondor job submission skill for MPI clusters. Simplifies resource specification and job submission using condor_submit_bid.",
+          "version": "1.0.0",
+          "author": {
+              "name": "Attila Juhos & Robin Ruff & Claude Code",
+              "email": "attila.juhos@tue.mpg.de"
+          },
+          "source": "./plugins/MPI-cluster",
+          "category": "productivity"
       }
     ]
   }
